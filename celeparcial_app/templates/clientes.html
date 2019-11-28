@@ -1,0 +1,37 @@
+{% extends "base_consultas.html" %}
+
+{% block title %}clientes{% endblock %}
+
+{% block page_content %}
+ <body>
+        <h1>Lista de clientes</h1>
+        <table >
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Direccion</th>
+                <th>Pais</th>
+                <th>Documento</th>
+                <th>Alta</th>
+                <th>Email</th>
+				<th>Trabajo</td>
+			
+            </tr>
+        {% for obj in object_list %}
+            <tr>
+               
+                <td>{{ obj.Nombre }}</td>
+                <td>{{ obj.Edad }}</td>
+                <td>{{ obj.Direccion }}</td>
+                <td>{{ obj.Pais }}</td>
+                <td>{{ obj.Documento}}</td>
+				<td>{{ obj.Alta}}</td>
+				<td>{{ obj.Email}}</td>
+                <td>{{ obj.Trabajo }}</td>
+
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+
+{% endblock %}
